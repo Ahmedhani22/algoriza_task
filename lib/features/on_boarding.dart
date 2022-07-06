@@ -1,7 +1,7 @@
 
-import 'package:algoriza_testt/components/component.dart';
-import 'package:algoriza_testt/modules/login.dart';
-import 'package:algoriza_testt/modules/register.dart';
+import 'package:algoriza_testt/core/my_button.dart';
+import 'package:algoriza_testt/features/login.dart';
+import 'package:algoriza_testt/features/register.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -53,7 +53,7 @@ class _BoardingScreenState extends State<BoardingScreen> {
                   style: ButtonStyle(
                       foregroundColor: MaterialStateProperty.all(Colors.white),
                       backgroundColor:
-                      MaterialStateProperty.all(Colors.blue[200]),
+                      MaterialStateProperty.all(Color(0xff55b1f0)),
                       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(25.0)))),
@@ -69,6 +69,25 @@ class _BoardingScreenState extends State<BoardingScreen> {
           padding: const EdgeInsets.all(20.0),
           child: Column(
             children: [
+          RichText(text: const TextSpan(
+          text: '7',
+            style: TextStyle(
+              fontSize: 25.0,
+              fontWeight: FontWeight.w500,
+              color: Color(0xffefe760),
+            ),
+            children: [
+              TextSpan(
+                  text: 'Krave',
+                  style: TextStyle(
+                    fontSize: 25.0,
+                    fontWeight: FontWeight.w500,
+                    color: Color(0xff55b1f0),
+                  )
+              )
+              ,],
+
+          ) ,),
               Expanded(
                 child: PageView.builder(
                   onPageChanged: (int index) {
@@ -99,7 +118,7 @@ class _BoardingScreenState extends State<BoardingScreen> {
                   dotWidth: 10.0,
                   spacing: 5.0,
                   expansionFactor: 4,
-                  activeDotColor: Colors.lightBlue,
+                  activeDotColor: Color(0xff55b1f0),
                 ),
                 controller: boardController,
                 count: boarding.length,
@@ -107,7 +126,7 @@ class _BoardingScreenState extends State<BoardingScreen> {
               SizedBox(
                 height: 20.0,
               ),
-              MyButton(
+              Mybutton(
                   text: 'Get Started',
                   OnClick: () {
                     Navigator.push(context,

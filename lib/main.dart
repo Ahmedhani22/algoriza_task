@@ -1,7 +1,8 @@
+import 'package:algoriza_testt/features/on_boarding.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import 'modules/on_boarding.dart';
+
 
 void main() {
   runApp(const MyApp());
